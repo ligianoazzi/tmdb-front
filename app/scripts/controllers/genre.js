@@ -12,10 +12,19 @@ angular.module('ourAppApp')
 
   	$scope._id = $routeParams.id_genre;
 
-	$http.get("https://api.themoviedb.org/3/list/"+$scope._id+"?api_key=448b0b79eba8d5a6b2e16bcd0e741d39")
+	/*$http.get("https://api.themoviedb.org/3/list/"+$scope._id+"?api_key=448b0b79eba8d5a6b2e16bcd0e741d39")
+		.then(function(response) {
+		$scope.films_genre = angular.fromJson(response).data;
+	});*/
+
+	$http.get("https://api.themoviedb.org/3/genre/"+$scope._id+"/movies?api_key=448b0b79eba8d5a6b2e16bcd0e741d39")	
+	
 		.then(function(response) {
 		$scope.films_genre = angular.fromJson(response).data;
 	});
+
+
+		
 
 
   });
