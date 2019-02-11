@@ -16,5 +16,5 @@ angular.module('ourAppApp')
     ];
 
 
-    $scope.about_description = 'this is about page';
+    $scope.about_description = 'this is about param, sent by about controller ';
   });
