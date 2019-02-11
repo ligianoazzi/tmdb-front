@@ -1,0 +1,29 @@
+<h1>List of genres</h1>
+
+<div id="custom-search-input">
+    <div class="input-group col-md-12">
+        <input type="text" class="form-control input-lg" placeholder="Search"  ng-model="query">
+        <span class="input-group-btn">
+            <button class="btn btn-info btn-lg" type="button">
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </span>
+    </div>
+</div>
+<br>
+<div ng-repeat="row in genres" class="container">
+
+	<div ng-repeat="genre in row | filter:query">
+
+		<a href="#!/genre/{{genre.id}}">
+		<button type="button" class="btn btn-default" aria-label="Left Align">
+			<span class="glyphicon glyphicon-paste" aria-hidden="true"></span>
+		</button></a>
+
+		<span> {{genre.name}}</span>
+
+		<hr>
+
+	</div>
+
+</div>

@@ -1,0 +1,8 @@
+> basead of
+https://www.agiletrailblazers.com/blog/how-to-start-an-angularjs-application
+
+
+> line command
+cd C:\Users\Ligiano Azzi\Desktop\projectMovie
+
+grunt serve

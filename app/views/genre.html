@@ -1,0 +1,50 @@
+<h1>List of films</h1>
+
+<div id="custom-search-input">
+    <div class="input-group col-md-12">
+        <input type="text" class="form-control input-lg" placeholder="Search"  ng-model="query">
+        <span class="input-group-btn">
+            <button class="btn btn-info btn-lg" type="button">
+                <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </span>
+    </div>
+</div>
+ 
+<div class="container" ng-repeat="row in films_genre.items | filter:{title:query}">
+
+<div>
+
+	<div class="card-show-left" align="center">
+		<img src="https://image.tmdb.org/t/p/w200/{{row.poster_path}}">
+	</div>	
+
+	<div class="card-show-right">
+
+		<button type="button" class="btn btn-default" aria-label="Left Align" ng-click="showDesc = !showDesc">
+			<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+		</button>
+		
+		<span><b>{{row.title}}</b></span>
+		<div ng-show="showDesc"> {{row.overview}} </div>
+
+
+	</div>
+
+
+	<hr>
+
+</div>
+
+</div>
+
+
+
+
+<div ng-if="films_genre.items == ''" class="alert alert-danger">
+No movie found for tis genre
+</div>
+
+
+
+
