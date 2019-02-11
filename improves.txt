@@ -1,6 +1,11 @@
+Front
  - pre-loading 
- - not put anyone in the scope
+ - to minify css / js
+ - not put anyone in the $scope (angular)
+ - Maybe, to use vuejs or another framework that use dom in memory
  - pagination
+
+Back
  - authenticate with JWT
  - keep the TMDB json in the localserver (to create Cronjob for get this data) and my website never get of TMDB server, get of localserver json.
 
